@@ -1,0 +1,40 @@
+a{
+    text-decoration: none;
+    color:#9ab;
+}
+.sidebar{
+    position: fixed;
+    left: 0;
+    bottom: 0;
+    top: 55px;
+    background-image: url(Header-Logos/Backdrop.png);
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center center;
+    width: 80px;
+    z-index: 200;
+    padding-top: 5px;
+    border-right-width: 1px;
+    border-right-style: solid;
+    border-top-width: 1px;
+    border-top-style: solid;
+    overflow-y: auto;
+}
+
+.side-button{
+    background-color: #14181c;
+    padding: 10px 8px;
+    border: none;
+    height: 95px;
+    width: 80px;
+    color: #9ab;
+    font-weight: bold;
+    margin-top: 2px;
+    margin-bottom: 2px;
+    font-family: TiemposHeadlineWeb, Georgia, serif, ColorEmoji;
+    cursor: pointer;
+}
+
+.side-button:hover{
+    background-color: #252c33;
+}

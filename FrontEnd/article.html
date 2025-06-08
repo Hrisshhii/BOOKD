@@ -1,0 +1,367 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+    <title>Article</title>
+    <link rel="stylesheet" href="article.css" />
+    <link rel="stylesheet" href="header.css" />
+</head>
+<body>
+    <header class="header">
+        <div class="left">
+            <a href="index.html">
+                <img class="web-logo" src="Header-Logos/Booked.png">
+            </a>
+        </div>
+        <div class="middle">
+            <div class="search-container">
+                <input type="text" id="search-bar" class="searchbar" placeholder="Search for books..." />
+                <button type="submit" class="searchbutton">
+                    <img class="search-icon" src="Header-Logos/search-icon.png">
+                <div class="tool-tip">Search</div>
+                </button>
+            </div>
+            <div id="search-results" class="search-results-container"></div>
+        </div>
+        <div class="right">
+            <div class="Lists">
+                <button class="listbutton">
+                    <a href="lists.html">
+                        <img class="list-icon" src="Header-Logos/lists.png">
+                    </a>
+                    <div class="tool-tip">Lists</div>
+                </button>
+            </div>
+            <div class="Popular">
+                <button class="Popularbutton">
+                    <a href="Popular.html">
+                        <img class="Popular-icon" src="Header-Logos/popular.png">
+                    </a>
+                    <div class="tool-tip">Popular</div>
+                </button>
+            </div>
+            <div class="Articles">
+                <button class="Articlebutton">
+                    <a href="Articles.html">
+                        <img class="Article-icon" src="Header-Logos/articles.png">
+                    </a>
+                    <div class="tool-tip">Articles</div>
+                </button>
+            </div>
+            <div class="MyProfile">
+                <button class="Profilebutton">
+                    <a href="profile.html">
+                        <img class="profile-icon" src="Header-Logos/profile.png">
+                    </a>
+                    <div class="tool-tip">Profile</div>
+                </button>
+            </div>
+        </div>
+    </header>
+
+    <main class="article-content">
+        <h1 id="article-title"></h1>
+        <p class="article-meta" id="article-meta"></p>
+        <p id="article-body"></p>
+    </main>
+
+    <script>
+        const articles = {
+            1: {
+                title: "The Magic of Murakami",
+                author: "Rina Kapoor",
+                date: "March 25, 2025",
+                body: `Haruki Murakami's novels blend the real with the surreal in beautifully poetic ways. 
+                From lonely protagonists to jazz bars and parallel universes, his stories take readers on emotional and imaginative journeys.
+                *Kafka on the Shore*, for instance, explores memory and fate with a dreamlike elegance, while *Norwegian Wood* tenderly captures the pain of young love and loss. 
+                Reading Murakami is like walking through a soft, strange dream that lingers long after you wake up.`
+            },
+            2: {
+                title: "Dostoevsky Still Matters",
+                author: "Ayaan Deshmukh",
+                date: "March 22, 2025",
+                body: `Fyodor Dostoevsky was not just a novelist — he was a philosopher of the soul. 
+                His works deal with morality, suffering, free will, and redemption. 
+                In *Crime and Punishment*, we dive into the mind of Raskolnikov, a man tormented by guilt after committing murder. 
+                *The Brothers Karamazov* presents spiritual and intellectual debates that still feel urgent today. 
+                Dostoevsky understood the darkness within us and the hope that can pull us out.`
+            },
+            3: {
+                title: "Why We Love Jane Austen",
+                author: "Meera Chauhan",
+                date: "March 18, 2025",
+                body: `Jane Austen captured the intricacies of relationships, class, and gender with wit and elegance. 
+                Her heroines are intelligent, flawed, and fiercely independent for their time. 
+                From Elizabeth Bennet's sharp tongue to Anne Elliot's quiet strength, Austen created women who were real and relatable. 
+                She wrote about marriage, but not just for romance — it was survival, status, and identity. 
+                And through it all, she made us laugh and think, two centuries later.`
+            },
+            4:{
+                title: "The Power of Book Clubs",
+                author: "Liam D’Silva",
+                date: "March 15, 2025",
+                body:`Book clubs are more than just gatherings to discuss plot twists — they are sanctuaries for shared reflection, empathy, and connection.
+                In a world where digital isolation is common, book clubs offer a return to meaningful conversation.
+                Whether it’s a group of friends, coworkers, or strangers meeting monthly, the act of reading the same text and interpreting it through personal lenses creates a rich tapestry of thought.
+
+                Discussions about character motivations can reveal someone’s personal struggles. Debates over a novel’s ending might touch on deeper beliefs about justice, love, or loss.
+                Reading becomes a communal experience — a bridge between people who might never otherwise connect.
+
+                Book clubs remind us that literature is not just solitary, it’s social. And in that space between opinions and interpretations, human bonds are formed.`
+            },
+            5:{
+                title: "The Rise of Audiobooks",
+                author: "Aanya Joseph",
+                date: "March 10, 2025",
+                body:`Are you really reading if you're listening? It's a question that divides purists and pioneers alike.
+                Audiobooks have surged in popularity, letting people consume stories while commuting, working out, or even doing chores.
+                But neuroscience says: yes, listening activates the same parts of the brain involved in comprehension, visualization, and empathy as reading does.
+
+                In fact, auditory storytelling has ancient roots — think of the oral traditions of epics passed down for centuries.
+                What's changing is not how we experience stories, but where and when.
+
+                Critics argue audiobooks lack the "active" engagement of print, but accessibility advocates and busy readers argue the opposite.
+                In the end, whether eyes or ears lead the way, what matters most is this: the story still lives within you.`
+            },
+            6:{
+                title: "The Language of Silence in Hemingway",
+                author: "Devika Pillai",
+                date: "March 5, 2025",
+                body:`Ernest Hemingway’s writing is known for what it doesn’t say.
+                His "iceberg theory" suggests that most of a story’s meaning lies beneath the surface — the unspoken, the implied, the withheld.
+
+                In The Old Man and the Sea, there is no grand exposition on courage, yet the fisherman’s silent endurance speaks louder than any monologue.
+                Hemingway’s sparse dialogue and clipped prose reflect emotional restraint, often linked to masculinity and war trauma.
+
+                But that silence isn’t emptiness — it’s tension. It’s the grief a character swallows, the longing they don’t name.
+                His minimalism invites the reader to do the emotional heavy lifting, to feel what isn’t said.
+                And in that space, his writing becomes universal.`
+            },
+            7: {
+                title: "Octavia Butler’s Vision of Tomorrow",
+                author: "Rohan Vaidya",
+                date: "February 28, 2025",
+                body:`Octavia Butler didn’t just write science fiction — she wrote prophecy, resistance, and identity.
+                In a genre long dominated by white male voices, she brought in new questions: What does power look like in a marginalized body?
+                What does survival mean for Black women in dystopia?
+
+                Her Parable series eerily predicted climate crises, corporate greed, and social collapse — decades before they became headlines.
+                But even in the bleakest futures, Butler infused hope, adaptability, and transformation.
+
+                She saw sci-fi not as escape, but as interrogation — a way to rewrite who gets to imagine the future.
+                And through her work, she handed us the tools to do just that.`
+            },
+            8:{
+                title: "Poetry for People Who Hate Poetry",
+                author: "Neha Pradhan",
+                date: "February 24, 2025",
+                body:`If you think poetry is boring, confusing, or pretentious — you're not alone.
+                But maybe you've just been handed the wrong poems.
+
+                Poetry doesn’t have to be about daffodils or dying romantics. It can be a meme, a tweet, a spoken word performance that hits like a punchline or a gut-punch.
+                Try Rupi Kaur’s vulnerable simplicity. Or the raw emotion of Andrea Gibson. Or the razor-sharp wit of Billy Collins.
+
+                Poetry today is political, hilarious, heart-wrenching, and even weird.
+                And because poems are often short, they fit perfectly into our fast-scrolling lives — but ask us to pause and feel.
+
+                So maybe give poetry another shot. You might just find a line that says exactly what you’ve been trying to.`
+            },
+            9:{
+                title: "The Literary Genius of Toni Morrison",
+                author: "Arjun Menon",
+                date: "February 21, 2025",
+                body:`Toni Morrison didn’t just write novels — she carved monuments to the Black experience in America.
+                With lyrical prose and unflinching honesty, she explored themes of race, trauma, history, and motherhood.
+                Beloved is both ghost story and historical reckoning. The Bluest Eye devastates with its portrait of internalized racism.
+
+                Morrison gave voice to pain and joy, to survival and resistance. She wrote characters who were flawed, beautiful, haunted — and real.
+                And through her stories, she demanded readers confront uncomfortable truths.
+
+                She once said, “I wrote my first novel because I wanted to read it.”
+                And in doing so, she gave generations of readers words they didn’t even know they needed.`
+            },
+            10:{
+                title: "Books That Predicted the Future",
+                author: "Sanya Bhatt",
+                date: "February 18, 2025",
+                body:`Some authors don’t just write fiction — they seem to time-travel.
+                George Orwell’s 1984 gave us Big Brother and surveillance before the internet existed.
+                Margaret Atwood’s The Handmaid’s Tale warned of reproductive control long before current debates reignited.
+
+                Ray Bradbury predicted earbuds, reality TV, and algorithm-driven entertainment.
+                Aldous Huxley foresaw a world addicted to pleasure and distraction.
+
+                These books aren’t crystal balls — they’re mirrors held up to the present, stretched to its extremes.
+                The best speculative fiction doesn’t just say “what if?” — it asks, “what now?”
+                And sometimes, that’s the wake-up call we need.`
+            },
+            11: {
+                title: "Kafka's Surreal Mind",
+                author: "Aniket Rao",
+                date: "April 11, 2025",
+                body: `Franz Kafka's stories aren't just strange — they're eerily familiar in how they reflect our fears. 
+                In *The Metamorphosis*, Gregor Samsa wakes up as a bug, but the horror lies not just in his transformation — it's in his family's reaction. 
+                Bureaucracy, absurdity, isolation — these themes are even more relevant today. 
+                Kafka forces us to confront a world where logic breaks down and human connection is fragile.`
+            },
+            12: {
+                title: "Books That Broke the Internet",
+                author: "Tara Singh",
+                date: "April 10, 2025",
+                body: `BookTok has changed the literary landscape. Books like *It Ends With Us* by Colleen Hoover and *A Court of Thorns and Roses* by Sarah J. Maas exploded in popularity not through traditional marketing but via viral TikToks. 
+                Emotional reads, spicy scenes, and relatable characters get people talking, crying, and buying. 
+                The community thrives on recommendations, reactions, and that thrill of finding your next obsession. 
+                Love it or hate it, BookTok is making people read — and that’s a win.`
+            },
+            13:{
+                title: "Reading as Resistance",
+                author: "Zoya Fernandes",
+                date: "April 8, 2025",
+                body:`In an age where truth is politicized and knowledge is controlled, reading banned books becomes a radical act.
+                From 1984 to The Hate U Give, books are often challenged not because they’re dangerous — but because they’re powerful.
+
+                Banned books tend to ask difficult questions. They spotlight marginalized voices, challenge systems, and refuse to sanitize history.
+                When certain titles are pulled from shelves, it’s rarely about the content alone. It’s about silencing conversations.
+
+                By choosing to read what others want hidden, readers become part of a quiet revolution.
+                They reclaim the right to think critically, to empathize, to question.
+                Because in the end, censorship isn’t just about books — it’s about control.
+                And reading is resistance.`
+            },
+            14:{
+                title: "How to Start Annotating Books",
+                author: "Nikhil Kapoor",
+                date: "April 6, 2025",
+                body:`Annotating books might seem intimidating — or like you’re “ruining” them — but it’s actually a way to build a deeper connection with what you read.
+                It turns reading from passive consumption into active dialogue.
+
+                Start simple: choose a few colored pens or highlighters. Assign each color a meaning — maybe yellow for key quotes, blue for questions, pink for emotional reactions.
+                Use sticky tabs for quick references or to mark favorite passages.
+
+                Don’t overthink it. Your notes can be messy, doodled, or deeply reflective. Write in the margins, ask the author questions, challenge the characters.
+
+                Annotation isn’t about being academic — it’s about making the book yours.
+                And when you revisit it years later, those scribbles will be like time capsules of your old self.`
+            },
+            15:{
+                title: "From Page to Screen: Adaptations that Worked",
+                author: "Shruti Mehta",
+                date: "April 3, 2025",
+                body:`Book-to-movie adaptations get a bad rap — and often, rightfully so.
+                But some adaptations do more than just "stick to the plot." They capture the spirit, elevate the story, and sometimes even enhance it.
+
+                Think The Lord of the Rings trilogy, where Peter Jackson turned Tolkien’s epic into cinematic magic without losing its soul.
+                Or Little Women (2019), which gave a modern rhythm to a beloved classic.
+                And Gone Girl, which brought Gillian Flynn’s twisted narrative to life with stunning precision.
+
+                The secret? Respect for the source material — not blind loyalty, but a creative understanding of what makes it resonate.
+
+                When done right, adaptations introduce great books to new audiences — and give old fans a chance to fall in love all over again.`
+            },
+            16:{
+                title: "How to Read More Without Forcing It",
+                author: "Tanvi Suresh",
+                date: "April 1, 2025",
+                body:`
+                You don’t have to race through 100 books a year to be a “real reader.”
+                Reading is not a competitive sport — it’s a joy, a refuge, a way of being.
+
+                If you’re struggling to keep up with reading goals, maybe it’s time to toss the goals altogether.
+                Start with short books. Try audiobooks. Read a few pages before bed. Re-read something you loved.
+                Leave a book unfinished if it’s not clicking. That’s okay too.
+
+                The point isn’t to “read more,” it’s to read meaningfully — in ways that nourish you, not exhaust you.
+                When you take the pressure off, reading becomes a habit again — not a homework assignment.`
+            },
+            17:{
+                title: "Dark Academia: Why It’s More Than Just Aesthetic",
+                author: "Vikram Shetty",
+                date: "March 30, 2025",
+                body:`Muted tweed coats. Candlelit libraries. Tragic poets and Latin quotes.
+                Dark Academia might look like just an internet aesthetic — but it’s rooted in something deeper.
+
+                At its core, Dark Academia romanticizes the pursuit of knowledge, even when it’s obsessive, isolating, or destructive.
+                It taps into a love for learning, for mystery, for the beauty and pain of intellectual life.
+
+                From Donna Tartt’s The Secret History to classics like Frankenstein, it’s a genre full of brooding students, crumbling institutions, and existential dread.
+
+                But it’s also about longing — for meaning, for beauty, for something timeless in a disposable age.
+                And that’s what makes it more than a moodboard — it’s a philosophy in disguise.`
+            },
+            18:{
+                title: "Comics Are Literature Too",
+                author: "Sara Poonawala",
+                date: "March 28, 2025",
+                body:`For too long, comics and graphic novels were dismissed as childish or lowbrow.
+                But storytelling through images is as old as cave paintings — and just as profound.
+
+                Take Maus by Art Spiegelman, which uses mice and cats to depict the Holocaust with devastating power.
+                Or Persepolis, where Marjane Satrapi explores identity and revolution in Iran through stark, expressive panels.
+
+                The best comics combine visual and verbal language in a way no traditional novel can.
+                They slow you down. Make you notice. Let you feel in frames.
+
+                It’s time we stopped treating “graphic novel” as a qualifier.
+                Comics are literature — just drawn differently.`
+            },
+            19:{
+                title: "Books to Break a Reading Slump",
+                author: "Karan Mistry",
+                date: "March 26, 2025",
+                body:`Can’t finish a book lately? You’re not alone.
+                Reading slumps are real — and the cure isn’t guilt, it’s the right book.
+
+                Look for short, immersive reads that grip you from page one.
+                Try thrillers like The Silent Patient, novellas like Of Mice and Men, or quirky memoirs like Educated.
+
+                Revisit an old favorite — nostalgia can rekindle the habit.
+                Graphic novels and audiobooks also help ease back in without pressure.
+
+                The goal is momentum, not masterpiece.
+                Once you finish one book, the next will feel easier.
+                And before you know it, the slump is a memory.`
+            },
+            20:{
+                title: "Literature of the Partition",
+                author: "Rehana Ahmed",
+                date: "February 4, 2025",
+                body:`The Partition of India in 1947 split nations — and tore millions of lives apart.
+                Through literature, that pain has been preserved, remembered, and understood across generations.
+
+                Stories like Khushwant Singh’s Train to Pakistan offer raw depictions of violence and dislocation.
+                Saadat Hasan Manto’s haunting short stories capture both brutality and absurdity with chilling clarity.
+
+                Pakistani, Indian, and Bangladeshi writers alike have chronicled this shared trauma through novels, poetry, and memoirs.
+                These aren’t just historical accounts — they’re acts of witness.
+
+                Partition literature doesn’t offer easy answers.
+                But it ensures that the suffering — and the resilience — are never forgotten.`
+            }
+        };
+
+        function getArticleIdFromURL() {
+            const params = new URLSearchParams(window.location.search);
+            return params.get('id');
+        }
+
+        function displayArticle() {
+            const articleId = getArticleIdFromURL();
+            const article = articles[articleId];
+
+            if (article) {
+                document.getElementById('article-title').textContent = article.title;
+                document.getElementById('article-meta').textContent = `by ${article.author} • ${article.date}`;
+                document.getElementById('article-body').textContent = article.body;
+            } else {
+                document.getElementById('article-title').textContent = "Article Not Found";
+                document.getElementById('article-meta').textContent = "";
+                document.getElementById('article-body').textContent = "The article you're looking for doesn't exist.";
+            }
+        }
+
+        displayArticle();
+    </script>
+    <script src="Search-book.js"></script>
+</body>
+</html>

@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Lists</title>
+        <link rel="stylesheet" href="lists.css">
+        <link rel="stylesheet" href="header.css">
+    </head>
+    <body>
+        <header class="header">
+            <div class="left">
+                <a href="index.html">
+                    <img class="web-logo" src="Header-Logos/Booked.png">
+                </a>
+            </div>
+            <div class="middle">
+                <div class="search-container">
+                    <input type="text" id="search-bar" class="searchbar" placeholder="Search for books..." />
+                    <button type="submit" class="searchbutton">
+                        <img class="search-icon" src="Header-Logos/search-icon.png">
+                    <div class="tool-tip">Search</div>
+                    </button>
+                </div>
+                <div id="search-results" class="search-results-container"></div>
+            </div>
+            <div class="right">
+                <div class="Lists">
+                    <button class="listbutton">
+                        <a href="lists.html">
+                            <img class="list-icon" src="Header-Logos/lists.png">
+                        </a>
+                        <div class="tool-tip">Lists</div>
+                    </button>
+                </div>
+                <div class="Popular">
+                    <button class="Popularbutton">
+                        <a href="Popular.html">
+                            <img class="Popular-icon" src="Header-Logos/popular.png">
+                        </a>
+                        <div class="tool-tip">Popular</div>
+                    </button>
+                </div>
+                <div class="Articles">
+                    <button class="Articlebutton">
+                        <a href="Articles.html">
+                            <img class="Article-icon" src="Header-Logos/articles.png">
+                        </a>
+                        <div class="tool-tip">Articles</div>
+                    </button>
+                </div>
+                <div class="MyProfile">
+                    <button class="Profilebutton">
+                        <a href="profile.html">
+                            <img class="profile-icon" src="Header-Logos/profile.png">
+                        </a>
+                        <div class="tool-tip">Profile</div>
+                    </button>
+                </div>
+            </div>
+        </header>
+
+        <section id="list-section">
+            <div class="lists-header">
+                <h2>Book Lists by Category</h2>
+                <button class="create-list-btn">
+                    <img src="Header-Logos/plus-icon.png" alt="Create List" />
+                    <span>Create Your Own List</span>
+                </button>
+            </div>
+        
+            <div id="category-lists">
+                <!-- These will be injected by JavaScript -->
+            </div>
+        </section>
+        
+
+        <script src="lists.js"></script>
+        <script src="Search-book.js"></script>
+    </body>
+</html>

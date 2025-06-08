@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Login Bookd</title>
+    <link rel="stylesheet" href="login.css">
+</head>
+<body>
+    <div class="container">
+        <h2>LOGIN</h2>
+        <form id="login-form">
+            <input class="input-field" name="email" type="text" placeholder="Enter email" required>
+            <input class="input-field" name="password" type="password" placeholder="Enter Password" required>
+
+            <button class="login-button" type="submit">Login</button>
+        </form>
+        <p class="register-link">DON'T HAVE AN ACCOUNT? <a href="register.html"><u>Register Now</u></a></p>
+    </div>
+    <script>
+        document.getElementById('login-form').addEventListener('submit', async function(event) {
+        event.preventDefault(); // Prevent default form submission
+
+        const email = document.querySelector('input[name="email"]').value;
+        const password = document.querySelector('input[name="password"]').value;
+
+        const response = await fetch('/login', {
+        method: 'POST',
+        headers: { 'Content-Type': 'application/json' },
+        body: JSON.stringify({ email, password })
+        });
+
+        if (response.redirected) {
+            window.location.href = response.url; // Handle the redirect manually
+        } else if (!response.ok) {
+            const errorMessage = await response.text();
+            alert(errorMessage);
+    }
+    });
+    </script>
+    
+</body>
+</html>

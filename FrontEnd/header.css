@@ -1,0 +1,187 @@
+
+/* Header styling */
+.header {
+    height: 55px; /* Fixed header height */
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    position: fixed;
+    top: 0;
+    right: 0;
+    left: 0;
+    background-image: url(Header-Logos/Backdrop.png);
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center center;
+    border-bottom-width: 1px;
+    border-bottom-style: solid;
+    z-index: 100;
+}
+
+/* Left, middle, and right sections inside the header */
+.left {
+    display: flex;
+    align-items: center;
+}
+
+.middle {
+    display: flex;
+    flex: 1;
+    margin-left: 70px;
+    margin-right: 35px;
+    max-width: 500px;
+    align-items: center;
+    flex-direction: column;
+}
+
+.right {
+    display: flex;
+    align-items: center;
+    flex-direction: row;
+    justify-content: space-between;
+    width: 180px;
+    margin-right: 35px;
+    flex-shrink: 0;
+}
+
+/* Search bar container */
+.search-container {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    width: 100%;
+}
+
+/* Search bar styling */
+.searchbar {
+    border-radius: 20px;
+    flex: 1;
+    height: 36px;
+    font-size: 16px;
+    padding-left: 15px;
+    background-image: url(Header-Logos/Backdrop.png);
+    border: 1px solid rgb(199,199,199);
+    box-shadow: inset 1px 2px 3px rgb(0,0,0,0.05);
+    color: #aab0bb;
+}
+
+.searchbar::placeholder {
+    color: #aab0bb;
+    opacity: 0.7;
+}
+
+/* Icons inside header */
+.web-logo {
+    height: 50px;
+}
+
+.search-icon, .list-icon, .Popular-icon, .Article-icon, .profile-icon {
+    height: 25px;
+}
+
+/* Search button styling */
+.searchbutton {
+    height: 40px;
+    width: 55px;
+    background-color: rgb(255, 255, 255);
+    border-width: 1px;
+    border-style: solid;
+    border-color: rgb(199, 199, 199);
+    border-radius: 20px;
+    margin-left: -25px;
+    margin-right: 10px;
+}
+
+.searchbutton:hover {
+    background-color: rgb(209, 208, 253);
+}
+
+.searchbutton:active {
+    background-color: rgb(85, 83, 100);
+}
+
+/* Button styling with tooltips */
+.searchbutton, .listbutton, .Popularbutton, .Articlebutton, .Profilebutton {
+    background-color: #aab0bb;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: relative;
+    border-width: 0.5px;
+    border-color: white;
+    margin: 1px;
+}
+
+/* Tooltip styling */
+.searchbutton .tool-tip, .listbutton .tool-tip, .Popularbutton .tool-tip, .Articlebutton .tool-tip, .Profilebutton .tool-tip {
+    position: absolute;
+    font-family: Roboto, Arial;
+    background-color: grey;
+    color: white;
+    padding-top: 4px;
+    padding-bottom: 4px;
+    padding-left: 8px;
+    padding-right: 8px;
+    border-radius: 2px;
+    font-size: 12px;
+    bottom: -30px;
+    opacity: 0;
+    transition: opacity 0.15s;
+    pointer-events: none;
+    white-space: nowrap;
+}
+
+.searchbutton:hover .tool-tip, .listbutton:hover .tool-tip, .Popularbutton:hover .tool-tip, .Articlebutton:hover .tool-tip, .Profilebutton:hover .tool-tip {
+    opacity: 1;
+}
+
+/* Search results container */
+.search-results-container {
+    margin-top: 20px;
+    display: flex;
+    flex-direction: column;
+    min-height: 300px;
+    max-height: 400px;
+    overflow-y: auto;
+    padding: 8px 0;
+    scroll-behavior: smooth;
+    width: 100%;
+}
+
+.search-results-container::-webkit-scrollbar {
+    display: none;
+}
+
+/* Search result item */
+.search-result-item {
+    background-image: url(Header-Logos/Backdrop.png);
+    display: flex;
+    flex-direction: row;
+    margin-bottom: 10px;
+    padding: 10px;
+    border: 1px solid #ddd;
+    border-radius: 5px;
+}
+
+.search-result-item img {
+    width: 50px;
+    height: 75px;
+    margin-right: 10px;
+}
+
+.search-result-item h4 {
+    font-size: 16px;
+    font-weight: bold;
+    margin: 0;
+}
+
+.search-result-item p {
+    font-size: 14px;
+    margin: 0;
+}
+
+/* Scrollable book container */
+.book-container {
+    max-height: 400px;
+    overflow-y: scroll;
+}

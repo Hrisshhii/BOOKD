@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Popular</title>
+        <link rel="stylesheet" href="Popular.css">
+        <link rel="stylesheet" href="header.css">
+    </head>
+    <body>
+        <header class="header">
+            <div class="left">
+                <a href="index.html">
+                    <img class="web-logo" src="Header-Logos/Booked.png">
+                </a>
+            </div>
+            <div class="middle">
+                <div class="search-container">
+                    <input type="text" id="search-bar" class="searchbar" placeholder="Search for books..." />
+                    <button type="submit" class="searchbutton">
+                        <img class="search-icon" src="Header-Logos/search-icon.png">
+                    <div class="tool-tip">Search</div>
+                    </button>
+                </div>
+                <div id="search-results" class="search-results-container"></div>
+            </div>
+            <div class="right">
+                <div class="Lists">
+                    <button class="listbutton">
+                        <a href="lists.html">
+                            <img class="list-icon" src="Header-Logos/lists.png">
+                        </a>
+                        <div class="tool-tip">Lists</div>
+                    </button>
+                </div>
+                <div class="Popular">
+                    <button class="Popularbutton">
+                        <a href="Popular.html">
+                            <img class="Popular-icon" src="Header-Logos/popular.png">
+                        </a>
+                        <div class="tool-tip">Popular</div>
+                    </button>
+                </div>
+                <div class="Articles">
+                    <button class="Articlebutton">
+                        <a href="Articles.html">
+                            <img class="Article-icon" src="Header-Logos/articles.png">
+                        </a>
+                        <div class="tool-tip">Articles</div>
+                    </button>
+                </div>
+                <div class="MyProfile">
+                    <button class="Profilebutton">
+                        <a href="profile.html">
+                            <img class="profile-icon" src="Header-Logos/profile.png">
+                        </a>
+                        <div class="tool-tip">Profile</div>
+                    </button>
+                </div>
+            </div>
+        </header>
+        <div class="top-section">
+            <section id="top-month-section">
+                <div class="title-text">Top This Month</div>
+                <div id="popular-books-section"></div>
+            </section>
+            <section id="top-rated-section">
+                <div class="title-text">Top Rated</div>
+                <div id="top-rated-books-section"></div>
+            </section>
+        </div>
+        <script src="Search-book.js"></script>
+        <script src="Popular.js"></script>
+    </body>
+</html>

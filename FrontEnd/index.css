@@ -1,0 +1,273 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+  }
+
+body{
+    margin-top: 75px;
+    margin-left: 100px;
+    background-image: url(Header-Logos/Background.png);
+    height: 100%;
+    background-repeat:repeat-y;
+    background-position: center center;
+    background-size: cover;
+    color: rgb(160, 174, 189);
+    font-family: GraphikWeb, -apple-system, BlinkMacSystemFont, Segoe UI, sans-serif;
+}
+
+.Book-Quotes{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.quote-box {
+    text-align: center;
+    padding: 20px;
+    max-width: 1000px;
+    margin: 0 auto;
+  }
+  
+  .quote-text {
+    font-size: 2.75rem;
+    font-weight: bold;
+    font-style: italic;
+    margin-bottom: 10px;
+  }
+  
+  .quote-author {
+    font-size: 1.5rem;
+    color: rgb(83, 112, 138);
+  }
+
+
+.book-slider{
+    margin-top: 20px;
+}
+
+.slider::-webkit-scrollbar{
+    display: none;
+}
+
+.poster{
+    max-height: 300px;
+    width: auto;
+}
+
+.book{
+    display: block;
+    max-width: 200px;
+}
+
+.Info{
+    display: grid;
+    grid-template-rows: 50px 50px 50px;
+    overflow-wrap: break-word;
+    white-space: normal;
+    text-align: center;
+}
+
+.Book-title{
+    line-height: 25px;
+    border: none;
+    margin: 2px;
+    font-size: 25px;
+    max-width: 100%;
+    padding: 1px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.author{
+    margin: 4px;
+    font-size: large;
+    font-weight: bold;
+    align-items: center;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.ratings{
+    font-weight: bold;
+    margin: 4px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.About-block,.feedback-block,.API-block{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    background-image: url(Header-Logos/Backdrop.png);
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center center;
+    border-radius: 30px;
+    padding: 20px;
+    margin: 10px;
+}
+
+.news-content {
+    padding: 10px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    height: 100%;
+}
+
+.News-block {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    background-image: url(Header-Logos/Backdrop.png);
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center center;
+    border-radius: 30px;
+    padding: 20px;
+    margin: 10px;
+    color: #fff;
+    position: relative;
+}
+
+.news-subtitle {
+    font-size: 20px;
+    text-align: center;
+    margin-bottom: 20px;
+}
+
+.news-items-container {
+    display: flex;
+    overflow: hidden;
+    scroll-behavior: smooth;
+    width: 100%;
+    justify-content: flex-start;
+}
+
+.news-item {
+    min-width: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+    justify-content: center;
+    padding: 0 10px;
+}
+
+.news-headline {
+    font-size: 24px;
+    font-weight: bold;
+    margin-bottom: 10px;
+}
+
+.news-link {
+    margin-top: 10px;
+    color: #FFD700;
+    font-size: 18px;
+    text-decoration: none;
+    font-weight: bold;
+    padding: 5px 10px;
+    border-radius: 5px;
+    border: 2px solid #FFD700;
+    transition: background-color 0.3s ease;
+}
+
+.news-link:hover {
+    background-color: #FFD700;
+    color: #000;
+}
+
+.title-text {
+    font-weight: bold;
+    font-size: 50px;
+    text-align: center;
+}
+
+.arrow {
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    background-color: rgba(0, 0, 0, 0.5);
+    color: white;
+    border: none;
+    font-size: 30px;
+    padding: 10px;
+    cursor: pointer;
+    z-index: 10;
+}
+
+.left-arrow {
+    left: 10px;
+}
+
+.right-arrow {
+    right: 10px;
+}
+
+.About-block p,.feedback-block p,.API-block p{
+    font-size: 20px;
+    margin-top: 10px;
+    text-align: center;
+}
+
+.feedback-box {
+    border-radius: 15px;
+    height: 45px;
+    font-size: 20px;
+    padding: 40px;
+    width: 100%;
+    max-width: 800px;
+    box-sizing: border-box;
+    background-image: url(Header-Logos/Backdrop.png);
+    border: 1px solid rgb(199,199,199);
+    box-shadow: inset 1px 2px 3px rgb(0,0,0,0.05);
+    color: #aab0bb;
+}
+
+.slider {
+    display: flex;
+    overflow-x: auto;
+    scroll-behavior: smooth;
+    gap: 16px;
+    padding: 10px;
+  }
+  
+.book-card {
+    flex: 0 0 auto;
+    width: 180px;
+    height: 350px;
+    background-image: url(Header-Logos/Backdrop.png);
+    border-radius: 8px;
+    box-shadow: 0 2px 6px rgba(0,0,0,0.1);
+    text-align: center;
+    padding: 10px;
+}
+  
+.book-cover {
+    width: 100%;
+    height: 220px;
+    object-fit: cover;
+    border-radius: 6px;
+}
+  
+.book-title {
+    font-size: 14px;
+    margin: 8px 0 4px;
+    font-weight: bold;
+}
+  
+.book-author,
+.book-rating {
+    font-size: 12px;
+    color: #555;
+}
+  
+
+.book-link{
+    text-decoration: none;
+    color: #aab0bb;
+}

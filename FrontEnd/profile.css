@@ -1,0 +1,141 @@
+body{
+    background-image: url(Header-Logos/Background.png);
+    background-size: cover;
+    background-repeat: repeat-y;
+    background-position: center center;
+    color: rgb(160, 174, 189);
+    font-family: GraphikWeb, -apple-system, BlinkMacSystemFont, Segoe UI, sans-serif;
+    color: #9ab;
+}
+
+.profile-box{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    font-size: 30px;
+}
+
+.Profile-pic{
+    margin-top: 200px;
+    height: 200px;
+}
+
+.username{
+    margin: 2px;
+    padding: 5px;
+    font-weight: bold;
+}
+
+.user-bio{
+    margin: 8px;
+    font-size: 22px;
+    padding: 5px;
+}
+
+.User-info-block{
+    background-image: url(Header-Logos/Backdrop.png);
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center center;
+    display: flex;
+    flex-direction: column;
+    border-style: solid;
+    border-width: 1px;
+    margin-right: 300px;
+    margin-left:300px;
+    border-radius: 10px;
+    border-color: #020303;
+}
+
+.Fav-5-block{
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+    overflow-x: auto;
+    white-space: nowrap;
+    scroll-behavior: smooth;
+    scrollbar-width: none;
+    -webkit-overflow-scrolling: touch;
+    padding: 10px;
+    max-width: 100%;
+}
+
+.Fav-5-block::-webkit-scrollbar{
+    display: none;
+}
+
+.Fav-poster {
+    min-width: 200px;
+    flex: 0 0 auto;
+    margin-right: 5px;
+    margin-left: 5px;
+}
+
+.current-reading{
+    margin: 2px;
+    padding: 5px;
+    padding-left: 100px;
+    display: flex;
+    flex-direction: row;
+    justify-content: left;
+    align-items: left;
+    border-bottom-style: solid;
+    border-bottom-width: 1px;
+    overflow-x: auto;
+    scrollbar-width: none;
+    white-space: nowrap;
+    scroll-behavior: smooth;
+}
+
+.poster{
+    margin: 4px;
+    height: 350px;
+}
+
+.des{
+    font-weight: bold;
+    margin: 2px;
+    font-size: 40px;
+}
+
+.Description-box{
+    padding-left: 50px;
+}
+
+.title-block{
+    padding: 4px;
+    padding-left: 60px;
+    margin: 2px;
+    font-weight: bolder;
+    font-size: 22px;
+}
+
+.other-info{
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    align-items: center;
+    border-bottom-width: 1px;
+    border-bottom-style:solid;
+    width: 100%;
+    padding: -10px;
+}
+.following {
+    display: flex;
+    justify-content: space-between;
+    width: 100%;
+}
+
+.count{
+    padding: 4px;
+    padding-right: 60px;
+    margin: 2px;
+    font-weight: bolder;
+    font-size: 22px;
+}
+
+.web-logo{
+    height: 70px;
+}
+

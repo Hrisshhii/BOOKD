@@ -1,0 +1,104 @@
+body{
+    margin-top: 75px;
+    margin-left: 100px;
+    margin-right: 100px;
+    background-image: url(Header-Logos/Background.png);
+    height: 100%;
+    background-repeat:repeat-y;
+    background-position: center center;
+    background-size: cover;
+    color: rgb(160, 174, 189);
+    font-family: GraphikWeb, -apple-system, BlinkMacSystemFont, Segoe UI, sans-serif;
+}
+
+.Articles-section{
+    margin: 20px;
+    padding: 20px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    background-image: url(Header-Logos/Backdrop.png);
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center center;
+    border-radius: 30px;
+}
+
+.Article-title{
+    font-size: 28px;
+}
+
+.Article-body{
+    font-size: 22px;
+}
+
+.title-text{
+    font-weight: bold;
+    font-size: 50px;
+    text-align: center;
+}
+
+.search-result-item {
+    text-decoration: none;
+    color: rgb(160, 174, 189);  /* Same as your theme */
+    display: block;
+    margin: 10px 0;
+    background-image: url(Header-Logos/Backdrop.png);
+    padding: 10px;
+    border-radius: 8px;
+    transition: background 0.3s, transform 0.2s;
+}
+
+.search-result-item:hover {
+    background-color: rgba(255, 255, 255, 0.05);
+    transform: scale(1.02);
+}
+
+.search-result-item h4, 
+.search-result-item p {
+    margin: 5px 0;
+    color: rgb(160, 174, 189);  /* consistent text color */
+    text-decoration: none;
+}
+
+.search-result-item img {
+    width: 80px;
+    height: auto;
+    margin-right: 10px;
+    vertical-align: middle;
+    border-radius: 5px;
+}
+
+.article-container {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 20px;
+    justify-content: center;
+}
+
+.article-card {
+    background-color: rgba(0, 0, 0, 0.3);
+    padding: 15px;
+    width: 300px;
+    border-radius: 15px;
+    text-decoration: none;
+    color: rgb(160, 174, 189);
+    transition: transform 0.3s ease, background-color 0.3s;
+}
+
+.article-card:hover {
+    transform: scale(1.03);
+    background-color: rgba(255, 255, 255, 0.05);
+}
+
+.read-more {
+    font-size: 16px;
+    margin-top: 10px;
+    color: #aaa;
+}
+
+.Article-meta {
+    font-size: 14px;
+    color: #bbb;
+    margin: 5px 0 10px;
+}

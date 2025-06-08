@@ -1,0 +1,98 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Book-info</title>
+        <link rel="stylesheet" href="Book-page.css">
+        <link rel="stylesheet" href="header.css">
+    </head>
+    <body>
+        <header class="header">
+            <div class="left">
+                <a href="index.html">
+                    <img class="web-logo" src="Header-Logos/Booked.png">
+                </a>
+            </div>
+            <div class="middle">
+                <div class="search-container">
+                    <input type="text" id="search-bar" class="searchbar" placeholder="Search for books..." />
+                    <button type="submit" class="searchbutton">
+                        <img class="search-icon" src="Header-Logos/search-icon.png">
+                    <div class="tool-tip">Search</div>
+                    </button>
+                </div>
+                <div id="search-results" class="search-results-container"></div>
+            </div>
+            <div class="right">
+                <div class="Lists">
+                    <button class="listbutton">
+                        <a href="lists.html">
+                            <img class="list-icon" src="Header-Logos/lists.png">
+                        </a>
+                        <div class="tool-tip">Lists</div>
+                    </button>
+                </div>
+                <div class="Popular">
+                    <button class="Popularbutton">
+                        <a href="Popular.html">
+                            <img class="Popular-icon" src="Header-Logos/popular.png">
+                        </a>
+                        <div class="tool-tip">Popular</div>
+                    </button>
+                </div>
+                <div class="Articles">
+                    <button class="Articlebutton">
+                        <a href="Articles.html">
+                            <img class="Article-icon" src="Header-Logos/articles.png">
+                        </a>
+                        <div class="tool-tip">Articles</div>
+                    </button>
+                </div>
+                <div class="MyProfile">
+                    <button class="Profilebutton">
+                        <a href="profile.html">
+                            <img class="profile-icon" src="Header-Logos/profile.png">
+                        </a>
+                        <div class="tool-tip">Profile</div>
+                    </button>
+                </div>
+            </div>
+        </header>
+
+        <div class="book-page-container">
+            <div class="book-details">
+                <img class="book-poster" id="book-poster" src="" alt="Book Poster">
+                <div class="book-info">
+                    <h1 id="book-title">Book Title</h1>
+                    <p id="book-author">by <span>Author Name</span></p>
+                    <p id="book-description">Book description goes here. It should be brief and captivating.</p>
+                    <p id="book-author-description"></p>
+                    <div id="book-rating">
+                        <strong>Rating:</strong> <span id="average-rating"></span>
+                    </div>
+                </div>
+            </div>
+        
+            <div class="reviews-section">
+                <h2>Reviews</h2>
+                <div class="reviews-filters">
+                    <button id="filter-users">Filter by Users</button>
+                    <button id="filter-friends">Filter by Friends</button>
+                </div>
+                <div id="reviews-container">
+                    <!-- Reviews will be dynamically inserted here -->
+                </div>
+            </div>
+        
+            <div class="suggestions-section">
+                <h2>Similar Books</h2>
+                <div id="suggested-books">
+                    <!-- Suggested books will be dynamically inserted here -->
+                </div>
+            </div>
+        </div>        
+        <script src="Book-page.js"></script>
+        <script src="Search-book.js"></script>
+    </body>
+</html>

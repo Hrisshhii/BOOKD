@@ -1,0 +1,169 @@
+/* Overall Page Styling */
+body {
+    margin-top: 75px;
+    margin-left: 80px;
+    margin-right: 80px;
+    background-image: url(Header-Logos/Background.png);
+    background-size: cover;
+    background-repeat: repeat-y;
+    background-position: center center;
+    color: rgb(160, 174, 189);
+    font-family: GraphikWeb, -apple-system, BlinkMacSystemFont, Segoe UI, sans-serif;
+}
+
+/* List Section Layout */
+#list-section {
+    margin: 40px 0;
+    display: flex;
+    flex-direction: column;
+    gap: 40px;
+}
+
+.list-header {
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 10px;
+  }
+
+/* Individual List Styling */
+.book-list {
+    margin: 15px;
+    position: relative;
+    padding: 20px 20px 30px;
+    background-image: url(Header-Logos/Backdrop.png);
+    background-size: cover;
+    background-position: center;
+    border-radius: 12px;
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.3);
+}
+
+/* List Heading */
+.book-list h3 {
+    font-size: 26px;
+    font-weight: bold;
+    margin-bottom: 20px;
+}
+
+/* Book Container */
+.books {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 15px;
+}
+
+/* Book Card */
+.book {
+    text-align: center;
+    width: 120px;
+}
+
+.book img {
+    width: 100px;
+    height: 150px;
+    object-fit: cover;
+    border-radius: 6px;
+}
+
+.book-title {
+    margin-top: 8px;
+    font-size: 14px;
+    font-weight: 500;
+}
+
+/* "Create Account" Button in Top Right */
+.add-to-profile-btn {
+    position: absolute;
+    top: 15px;
+    right: 15px;
+    padding: 8px 14px;
+    background-color: #4CAF50;
+    color: white;
+    border: none;
+    border-radius: 6px;
+    font-size: 14px;
+    cursor: pointer;
+    transition: background-color 0.2s ease;
+}
+
+.add-to-profile-btn:hover {
+    background-color: #45a049;
+}
+
+/* Bookmark Icon Below Each Book */
+.bookmark-icon {
+    width: 24px;
+    height: 24px;
+    margin-top: 6px;
+    cursor: pointer;
+    filter: drop-shadow(1px 1px 1px black);
+    transition: transform 0.2s ease, opacity 0.2s ease;
+}
+
+.bookmark-icon:hover {
+    transform: scale(1.15);
+    opacity: 0.8;
+}
+
+.lists-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 30px;
+}
+
+.create-list-btn {
+    background-color: #4CAF50;
+    color: white;
+    padding: 10px 16px;
+    border: none;
+    border-radius: 6px;
+    font-size: 14px;
+    display: flex;
+    align-items: center;
+    gap: 6px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+.create-list-btn:hover {
+    background-color: #3e8e41;
+}
+
+.create-list-btn img {
+    width: 18px;
+    height: 18px;
+}
+
+
+.search-result-item {
+    text-decoration: none;
+    color: rgb(160, 174, 189);  /* Same as your theme */
+    display: block;
+    margin: 10px 0;
+    background-image: url(Header-Logos/Backdrop.png);
+    padding: 10px;
+    border-radius: 8px;
+    transition: background 0.3s, transform 0.2s;
+}
+
+.search-result-item:hover {
+    background-color: rgba(255, 255, 255, 0.05);
+    transform: scale(1.02);
+}
+
+.search-result-item h4, 
+.search-result-item p {
+    margin: 5px 0;
+    color: rgb(160, 174, 189);
+    text-decoration: none;
+}
+
+.search-result-item img {
+    width: 80px;
+    height: auto;
+    margin-right: 10px;
+    vertical-align: middle;
+    border-radius: 5px;
+}

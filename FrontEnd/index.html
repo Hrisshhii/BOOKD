@@ -1,0 +1,323 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Book Website</title>
+        <link rel="stylesheet" href="header.css">
+        <link rel="stylesheet" href="index.css">
+        <link rel="stylesheet" href="Sidebar.css">
+    </head>
+    <body>
+        <header class="Book-Quotes">
+            <div id="book-quote" class="quote-box">
+                <p class="quote-text">Loading quote...</p>
+                <p class="quote-author"></p>
+              </div>              
+        </header>
+
+        <header class="header">
+            <div class="left">
+                <a href="index.html">
+                    <img class="web-logo" src="Header-Logos/Booked.png">
+                </a>
+            </div>
+            <div class="middle">
+                <div class="search-container">
+                    <input type="text" id="search-bar" class="searchbar" placeholder="Search for books..." />
+                    <button type="submit" class="searchbutton">
+                        <img class="search-icon" src="Header-Logos/search-icon.png">
+                    <div class="tool-tip">Search</div>
+                    </button>
+                </div>
+                <div id="search-results" class="search-results-container"></div>
+            </div>
+            <div class="right">
+                <div class="Lists">
+                    <button class="listbutton">
+                        <a href="lists.html">
+                            <img class="list-icon" src="Header-Logos/lists.png">
+                        </a>
+                        <div class="tool-tip">Lists</div>
+                    </button>
+                </div>
+                <div class="Popular">
+                    <button class="Popularbutton">
+                        <a href="Popular.html">
+                            <img class="Popular-icon" src="Header-Logos/popular.png">
+                        </a>
+                        <div class="tool-tip">Popular</div>
+                    </button>
+                </div>
+                <div class="Articles">
+                    <button class="Articlebutton">
+                        <a href="Articles.html">
+                            <img class="Article-icon" src="Header-Logos/articles.png">
+                        </a>
+                        <div class="tool-tip">Articles</div>
+                    </button>
+                </div>
+                <div class="MyProfile">
+                    <button class="Profilebutton">
+                        <a href="profile.html">
+                            <img class="profile-icon" src="Header-Logos/profile.png">
+                        </a>
+                        <div class="tool-tip">Profile</div>
+                    </button>
+                </div>
+            </div>
+        </header>
+        
+        <nav class="sidebar">
+            <div class="sidelink">
+                <button class="side-button" onclick="scrollToSection('about')">
+                    About
+                </button>
+            </div>
+            <div class="sidelink" onclick="scrollToSection('news')">
+                <button class="side-button">
+                    News
+                </button>
+            </div>
+            <div class="sidelink">
+                <button class="side-button" onclick="scrollToSection('api')">
+                    API
+                </button>
+            </div>
+            <div class="sidelink">
+                <button class="side-button" onclick="scrollToSection('feedback')">
+                    Feedback
+                </button>
+            </div>
+        </nav>
+
+        <section class="book-slider">
+            <h2>Popular This Month</h2>
+            <div class="slider" id="popular-slider"></div> 
+        </section>
+            <section class="book-slider">
+            
+            <h2>Friends Current Readings!!</h2>
+            <div class="slider">
+                <div class="book">
+                    <img class="poster" src="Book covers/crime and punishment.jpg">
+                    <div class="Info">
+                        <p class="Book-title">Crime and punishment</p>
+                        <p class="author">Fyodor Dostoyevsky</p>
+                        <p class="ratings">⭐⭐⭐⭐☆ 4.5</p>
+                    </div>
+                </div>
+
+                <div class="book">
+                    <img class="poster" src="Book covers/Insulted and humiliated.jpg">
+                    <div class="Info">
+                        <p class="Book-title">Insulted and humiliated</p>
+                        <p class="author">Fyodor Dostoyevsky</p>
+                        <p class="ratings">⭐⭐⭐⭐ 4.0</p>
+                    </div>
+                </div>
+
+                <div class="book">
+                    <img class="poster" src="Book covers/Metamorphosis.jpg">
+                    <div class="Info">
+                        <p class="Book-title">Metamorphosis</p>
+                        <p class="author">Franz Kafka</p>
+                        <p class="ratings">⭐⭐⭐⭐⭐ 4.8</p>
+                    </div>
+                </div>
+
+                <div class="book">
+                    <img class="poster" src="Book covers/Notes form a dead house.jpg">
+                    <div class="Info">
+                        <p class="Book-title">Notes form a dead house</p>
+                        <p class="author">Fyodor Dostoyevsky</p>
+                        <p class="ratings">⭐⭐⭐⭐☆ 4.2</p>
+                    </div>
+                </div>
+
+                <div class="book">
+                    <img class="poster" src="Book covers/Stories.jpg">
+                    <div class="Info">
+                        <p class="Book-title">Franz Kafka Stories</p>
+                        <p class="author">Franz Kafka</p>
+                        <p class="ratings">⭐⭐⭐☆☆ 3.0</p>
+                    </div>
+                </div>
+
+                <div class="book">
+                    <img class="poster" src="Book covers/The trial.jpg">
+                    <div class="Info">
+                        <p class="Book-title">The Trial</p>
+                        <p class="author">Franz Kafka</p>
+                        <p class="ratings">⭐⭐⭐⭐ 4.0</p>
+                    </div>
+                </div>
+            </div>
+
+            <h2>Friends and Followers' Recents</h2>
+            <div class="slider">
+                <div class="book">
+                    <img class="poster" src="Book covers/crime and punishment.jpg">
+                    <div class="Info">
+                        <p class="Book-title">Crime and punishment</p>
+                        <p class="author">Fyodor Dostoyevsky</p>
+                        <p class="ratings">⭐⭐⭐⭐☆ 4.5</p>
+                    </div>
+                </div>
+
+                <div class="book">
+                    <img class="poster" src="Book covers/Insulted and humiliated.jpg">
+                    <div class="Info">
+                        <p class="Book-title">Insulted and humiliated</p>
+                        <p class="author">Fyodor Dostoyevsky</p>
+                        <p class="ratings">⭐⭐⭐⭐ 4.0</p>
+                    </div>
+                </div>
+
+                <div class="book">
+                    <img class="poster" src="Book covers/Metamorphosis.jpg">
+                    <div class="Info">
+                        <p class="Book-title">Metamorphosis</p>
+                        <p class="author">Franz Kafka</p>
+                        <p class="ratings">⭐⭐⭐⭐⭐ 4.8</p>
+                    </div>
+                </div>
+
+                <div class="book">
+                    <img class="poster" src="Book covers/Notes form a dead house.jpg">
+                    <div class="Info">
+                        <p class="Book-title">Notes form a dead house</p>
+                        <p class="author">Fyodor Dostoyevsky</p>
+                        <p class="ratings">⭐⭐⭐⭐☆ 4.2</p>
+                    </div>
+                </div>
+
+                <div class="book">
+                    <img class="poster" src="Book covers/Stories.jpg">
+                    <div class="Info">
+                        <p class="Book-title">Franz Kafka Stories</p>
+                        <p class="author">Franz Kafka</p>
+                        <p class="ratings">⭐⭐⭐☆☆ 3.0</p>
+                    </div>
+                </div>
+
+                <div class="book">
+                    <img class="poster" src="Book covers/The trial.jpg">
+                    <div class="Info">
+                        <p class="Book-title">The Trial</p>
+                        <p class="author">Franz Kafka</p>
+                        <p class="ratings">⭐⭐⭐⭐ 4.0</p>
+                    </div>
+                </div>
+            </div>
+
+            <h2>Popular Amongst Friend</h2>
+            <div class="slider">
+                <div class="book">
+                    <img class="poster" src="Book covers/crime and punishment.jpg">
+                    <div class="Info">
+                        <p class="Book-title">Crime and punishment</p>
+                        <p class="author">Fyodor Dostoyevsky</p>
+                        <p class="ratings">⭐⭐⭐⭐☆ 4.5</p>
+                    </div>
+                </div>
+
+                <div class="book">
+                    <img class="poster" src="Book covers/Insulted and humiliated.jpg">
+                    <div class="Info">
+                        <p class="Book-title">Insulted and humiliated</p>
+                        <p class="author">Fyodor Dostoyevsky</p>
+                        <p class="ratings">⭐⭐⭐⭐ 4.0</p>
+                    </div>
+                </div>
+
+                <div class="book">
+                    <img class="poster" src="Book covers/Metamorphosis.jpg">
+                    <div class="Info">
+                        <p class="Book-title">Metamorphosis</p>
+                        <p class="author">Franz Kafka</p>
+                        <p class="ratings">⭐⭐⭐⭐⭐ 4.8</p>
+                    </div>
+                </div>
+
+                <div class="book">
+                    <img class="poster" src="Book covers/Notes form a dead house.jpg">
+                    <div class="Info">
+                        <p class="Book-title">Notes form a dead house</p>
+                        <p class="author">Fyodor Dostoyevsky</p>
+                        <p class="ratings">⭐⭐⭐⭐☆ 4.2</p>
+                    </div>
+                </div>
+
+                <div class="book">
+                    <img class="poster" src="Book covers/Stories.jpg">
+                    <div class="Info">
+                        <p class="Book-title">Franz Kafka Stories</p>
+                        <p class="author">Franz Kafka</p>
+                        <p class="ratings">⭐⭐⭐☆☆ 3.0</p>
+                    </div>
+                </div>
+
+                <div class="book">
+                    <img class="poster" src="Book covers/The trial.jpg">
+                    <div class="Info">
+                        <p class="Book-title">The Trial</p>
+                        <p class="author">Franz Kafka</p>
+                        <p class="ratings">⭐⭐⭐⭐ 4.0</p>
+                    </div>
+                </div>
+            </div>
+
+        </section>
+
+        <div class="News-block news-slider" id="news">
+            <div class="title-text">Flash News</div>
+            <p class="news-subtitle">Stay Updated about Upcoming Books and Popular Books</p>
+            
+            <button class="arrow left-arrow" id="left-arrow">←</button>
+            
+            <div class="news-items-container" id="news-items-container">
+            </div>
+            
+            <button class="arrow right-arrow" id="right-arrow">→</button>
+        </div>
+
+        <div class="About-block" id="about">
+            <div class="title-text">About</div>
+            <div>
+                <p>Welcome to Bookd, the ultimate platform for book lovers! Whether you're an avid reader, a casual browser, or a dedicated reviewer, our site is designed to help you track, discover, and discuss books with a like-minded community.</p>
+                
+                <p><strong>What We Offer:</strong></p>
+                <ul>
+                    <li>📖 <strong>Personalized Book Lists</strong> – Keep track of what you’ve read, what you’re reading, and what’s on your to-read list.</li>
+                    <li>⭐ <strong>Ratings & Reviews</strong> – Share your thoughts on books and see what others think.</li>
+                    <li>📚 <strong>Discover New Reads</strong> – Find trending books, top-rated classics, and hidden gems.</li>
+                    <li>👥 <strong>Social Features</strong> – Connect with friends, follow other readers, and explore book recommendations based on your interests.</li>
+                    <li>🔍 <strong>Book Data & Insights</strong> – Get detailed information about books, authors, and trends.</li>
+                </ul>
+        
+                <p>Join <strong>Bookd</strong> and be part of a growing community of book enthusiasts!</p>
+            </div>
+        </div>
+
+        <div class="API-block" id="api">
+            <div class="title-text">APIS Used</div>
+            <div>
+                <p><a >Google Books API</a></p>
+            </div>
+        </div>
+
+        <div class="feedback-block" id="feedback">
+            <div class="title-text">Feedback</div>
+            <div>
+                <p>Provide us Feedback To make us better</p>
+                <input class="feedback-box" type="text" placeholder="FeedBack">
+            </div>
+        </div>
+
+        <script src="News-dynamic.js"></script>
+        <script src="quotes.js"></script>
+        <script src="script.js"></script>
+        <script src="Search-book.js"></script>
+    </body>
+</html>

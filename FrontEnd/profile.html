@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>MyProfile</title>
+        <link rel="stylesheet" href="profile.css">
+    </head>
+    <body>
+        <header>
+            <a href="index.html">
+                <img class="web-logo" src="Header-Logos/Booked.png">
+            </a>
+        </header>
+
+        <header class="profile-box">
+            <input type="file" id="upload-profile-pic" accept="image/*" style="display: none;" />
+            <label for="upload-profile-pic">
+                <img id="Profile-pic" class="Profile-pic" src="Header-Logos/profile-pic.png" alt="Profile Picture" />
+            </label>
+            <p id="username" class="username">Profile Id</p>
+            <p id="user-bio" class="user-bio">Hey I'm a Bookd user</p>
+        </header>
+
+        <nav class="User-info-block">
+            <p class="title-block">FAVORITES:</p>
+            <div class="Fav-5-block" id="favorites-section"></div>
+
+            <p class="title-block">Currently Reading:</p>
+            <div class="current-reading" id="current-reading">
+            </div>
+
+            <div class="other-info">
+                <div class="other-info">
+                    <div class="following">
+                        <p class="title-block">Books Read</p>
+                        <p id="read-count" class="count">0</p>
+                    </div>
+                    <div class="book-read-section" id="books-read-section"></div>
+                </div>
+                
+                <div class="other-info">
+                    <div class="following">
+                        <p class="title-block">Readlist</p>
+                        <p id="readlist-count" class="count">0</p>
+                    </div>
+                    <div class="readlist-section" id="readlist-section"></div>
+                </div>
+                
+                <div class="other-info">
+                    <div class="following">
+                        <p class="title-block">Liked Reviews</p>
+                        <p id="liked-reviews-count" class="count">0</p>
+                    </div>
+                    <ul id="liked-reviews"></ul>
+                </div>
+                
+                <div class="other-info">
+                    <div class="following">
+                        <p class="title-block">Saved Lists</p>
+                        <p id="saved-lists-count" class="count">0</p>
+                    </div>
+                    <ul id="saved-lists"></ul> 
+                </div> 
+
+                <div class="other-info">
+                    <div class="following">
+                        <p class="title-block">Followers</p>
+                        <p id="followers-count" class="count">0</p>
+                    </div>
+                </div>
+                  
+                <div class="other-info">
+                    <div class="following">
+                        <p class="title-block">Following</p>
+                        <p id="following-count" class="count">0</p>
+                    </div>  
+                </div>
+
+                <div class="other-info">
+                    <a href="help.html" style="text-decoration: none; color: aliceblue;"><p class="title-block">Help</p></a>
+                  </div>
+                  
+                  <div class="other-info">
+                    <a href="settings.html" style="text-decoration: none; color: aliceblue;"><p class="title-block">Settings</p></a>
+                  </div>
+            </div>
+        </nav>
+
+        <script src="profile.js"></script>
+    </body>
+</html>
