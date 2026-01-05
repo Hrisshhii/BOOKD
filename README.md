@@ -2,7 +2,8 @@
 
 BOOKD is a backend-focused project built with **Node.js and Express** that serves as the foundation for a book-based application. It is designed to handle server-side logic, environment configuration, and API handling for a book-related platform.
 
-> ⚠️ **Work in Progress**: This project is actively being developed and may change over time.
+> ⏸️ **Project Status**: Development is currently paused while I focus on strengthening core fundamentals and completing relevant coursework.  
+> The project will be revisited and extended in the future.
 
 ---
 
@@ -26,6 +27,7 @@ BOOKD is a backend-focused project built with **Node.js and Express** that serve
 ---
 
 ## 📂 Project Structure
+
 
 ```
 BOOKD/
@@ -97,11 +99,11 @@ http://localhost:5000
 
 ## 📖 Learning Goals
 
-This project helps practice:
-
-* Backend project structure
+This project was built to practice:
+* Backend project structuring
 * Express server setup
-* Environment configuration
+* Environment-based configuration
+* REST API foundations
 * Git & GitHub workflow
 
 ---
